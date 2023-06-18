@@ -2,17 +2,10 @@ mod shapes;
 use shapes::{Area, Circle, Parallelogram, Rectangle, Square, Triangle};
 
 fn main() {
-    println!(
-        "Enter the type of shape \n[1.Triangle  2.Rectangle  3.Square  4.Circle  5.Parallelogram]"
-    );
-    let mut input = String::new();
-    std::io::stdin()
-        .read_line(&mut input)
-        .expect("Not a valid floating point number, please try again.");
+    println!("[1] Triangle\n[2] Rectangle\n[3] Square\n[4] Circle\n[5] Parallelogram");
+    let shape_type = shapes::input("Enter the shape type: ");
 
-    let shape_type: i32 = input.trim().parse().expect("Please enter a valid number!");
-
-    match shape_type {
+    match shape_type as i32 {
         1 => {
             let triangle = Triangle::construct();
             println!("Area of Triangle is: {}", triangle.area());

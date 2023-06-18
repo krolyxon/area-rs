@@ -1,4 +1,4 @@
-fn input(prompt: &str) -> f32 {
+pub fn input(prompt: &str) -> f32 {
     use std::io::{stdin, stdout, Write};
     print!("{}", prompt);
     stdout().flush().unwrap();
