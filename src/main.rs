@@ -7,23 +7,23 @@ fn main() {
 
     match shape_type as i32 {
         1 => {
-            let triangle = Triangle::construct();
+            let triangle: Triangle = Triangle::construct();
             println!("Area of Triangle is: {}", triangle.area());
         }
         2 => {
-            let rectangle = Rectangle::construct();
+            let rectangle: Rectangle = Rectangle::construct();
             println!("Area of Rectangle is: {}", rectangle.area());
         }
         3 => {
-            let square = Square::construct();
+            let square: Square = Square::construct();
             println!("Area of Square is: {}", square.area());
         }
         4 => {
-            let circle = Circle::construct();
+            let circle: Circle = Circle::construct();
             println!("Area of Circle is: {}", circle.area());
         }
         5 => {
-            let parallelogram = Parallelogram::construct();
+            let parallelogram: Parallelogram = Parallelogram::construct();
             println!("Area of Parallelogram is: {}", parallelogram.area());
         }
         _ => println!("Not a valid shape type."),
