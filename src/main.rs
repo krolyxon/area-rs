@@ -1,7 +1,14 @@
+mod ascii;
+mod colors;
 mod shapes;
+use ascii::BANNER;
+use colors::{CYAN, RESET};
 use shapes::{Area, Circle, Parallelogram, Rectangle, Square, Triangle};
 
 fn main() {
+    print!("\x1B[2J\x1B[1;1H");
+    println!("{CYAN}{}{RESET}", BANNER);
+
     println!("[1] Triangle\n[2] Rectangle\n[3] Square\n[4] Circle\n[5] Parallelogram");
     let shape_type = shapes::input("Enter the shape type: ");
 
